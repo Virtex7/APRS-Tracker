@@ -1,6 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Resonator_3pins
-LIBS:ph-modules
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,18 +28,20 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ph-modules
+LIBS:Resonator_3pins
 LIBS:prog_sockets
-LIBS:w_microcontrollers
 LIBS:schaltwandler
+LIBS:w_microcontrollers
 LIBS:stm32 APRS Tracker-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title ""
-Date ""
-Rev ""
+Title "APRS-GPS-Tracker"
+Date "2015-07-02"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -1056,9 +1056,9 @@ F 3 "" H 6000 1700 60  0000 C CNN
 	1    6000 1700
 	1    0    0    -1  
 $EndComp
-Text Label 5800 2250 1    60   ~ 0
+Text Label 5800 1700 3    60   ~ 0
 I2C2_SDA
-Text Label 5900 2250 1    60   ~ 0
+Text Label 5900 1700 3    60   ~ 0
 I2C2_SCL
 Wire Wire Line
 	5800 2250 5800 1700
@@ -1245,4 +1245,49 @@ Text Notes 8950 1350 0    60   ~ 0
 Tiefpass für Sollsignal
 Text Notes 10050 2600 0    60   ~ 0
 Ausgang-\nAnpassung\n(Trafo)
+NoConn ~ 2550 4450
+$Comp
+L R R?
+U 1 1 5595D5C9
+P 5650 2250
+F 0 "R?" V 5730 2250 50  0000 C CNN
+F 1 "4,7k" V 5650 2250 50  0000 C CNN
+F 2 "" V 5580 2250 30  0000 C CNN
+F 3 "" H 5650 2250 30  0000 C CNN
+	1    5650 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5595D82C
+P 6050 2250
+F 0 "R?" V 6130 2250 50  0000 C CNN
+F 1 "4,7k" V 6050 2250 50  0000 C CNN
+F 2 "" V 5980 2250 30  0000 C CNN
+F 3 "" H 6050 2250 30  0000 C CNN
+	1    6050 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5595D8DB
+P 5500 2250
+F 0 "#PWR?" H 5500 2100 50  0001 C CNN
+F 1 "+3.3V" H 5500 2390 50  0000 C CNN
+F 2 "" H 5500 2250 60  0000 C CNN
+F 3 "" H 5500 2250 60  0000 C CNN
+	1    5500 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5595D967
+P 6200 2250
+F 0 "#PWR?" H 6200 2100 50  0001 C CNN
+F 1 "+3.3V" H 6200 2390 50  0000 C CNN
+F 2 "" H 6200 2250 60  0000 C CNN
+F 3 "" H 6200 2250 60  0000 C CNN
+	1    6200 2250
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

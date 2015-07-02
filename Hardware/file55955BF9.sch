@@ -1,6 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Resonator_3pins
-LIBS:ph-modules
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,18 +28,20 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ph-modules
+LIBS:Resonator_3pins
 LIBS:prog_sockets
-LIBS:w_microcontrollers
 LIBS:schaltwandler
+LIBS:w_microcontrollers
 LIBS:stm32 APRS Tracker-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title ""
-Date ""
-Rev ""
+Title "APRS-GPS-Tracker"
+Date "2015-07-02"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
