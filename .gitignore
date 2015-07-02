@@ -1,0 +1,14 @@
+# die folgenden Dateitypen und Ordner werden nicht ins git aufgenommen!
+
+# KiCAD:
+*.bak
+*.brd
+*.kicad_pcb-bak
+*.gif
+*.ps
+gerber/*
+
+.directory
+..directory.kate-swp
+
+# STM32 Kompilat und Zubehördaten:
