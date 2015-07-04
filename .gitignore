@@ -12,3 +12,12 @@ gerber/*
 ..directory.kate-swp
 
 # STM32 Kompilat und Zubehördaten:
+
+*.a
+*.o
+*.hex
+*.elf
+*.eep
+*.d
+*.bin
+*.map
