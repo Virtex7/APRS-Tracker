@@ -9,6 +9,13 @@
 #include "delay.h"
 #include "usart.h"
 
+#include "board.h"
+#include "comm.h"
+#include "fattime.h"
+#include "ff_test_term.h"
+#include "rtc.h"
+#include "term_io.h"
+
 
 void clock_setup(void);
 void gpio_setup(void);
@@ -16,7 +23,8 @@ void gpio_setup(void);
 
 void clock_setup(void) {
 	// High Speed internal oscillator wird auf die PLL gemappt
-	// -> VOLLGAS!
+	// -> VOLLGAS/2
+	rcc_clock_setup_hse_3v3(&hse_8mhz_3v3[CLOCK_3V3_48MHZ]);
 	
 	// Enable GPIOD clock für ALLE GPIOs.
 	rcc_periph_clock_enable(RCC_GPIOA);
