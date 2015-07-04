@@ -1,0 +1,23 @@
+LCD: Portierung der Adafruit-Lib von:
+https://github.com/adafruit/TFTLCD-Library lizensiert unter MIT license
+
+This is a library for the Adafruit 2.8" TFT display.
+This library works with the Adafruit 2.8" TFT Breakout w/SD card
+  ----> http://www.adafruit.com/products/335
+as well as Adafruit TFT Touch Shield
+  ----> http://www.adafruit.com/products/376
+ 
+Check out the links above for our tutorials and wiring diagrams.
+These displays use 8-bit parallel to communicate, 12 or 13 pins are required
+to interface (RST is optional).
+Adafruit invests time and resources providing this open source code,
+please support Adafruit and open-source hardware by purchasing
+products from Adafruit!
+
+Written by Limor Fried/Ladyada for Adafruit Industries.
+MIT license, all text above must be included in any redistribution
+
+
+
+SD-Card: Portierung von ChaNs FAT driver von:
+Martin Thomas - http://www.jiggerjuice.info/electronics/projects/arm/chanfat-stm32f103-port.html

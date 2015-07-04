@@ -45,32 +45,23 @@ int main(void) {
 	
 	LCD_Begin();
 	LCD_SetRotation(0);
-	LCD_FillScreen(YELLOW);
-	LCD_DrawFastHLine(0, 160, 240, WHITE);
-	LCD_DrawCircle(120, 160, 100, WHITE);
+	LCD_FillScreen(BLACK);
+	LCD_DrawFastHLine(0, 160, 240, RED);
+	LCD_DrawCircle(120, 160, 100, BLUE);
 	LCD_DrawRect(20, 40, 200, 240, WHITE);
 	
-	Touch_Begin();
+// 	Touch_Begin();
 	
-	LCD_SetTextColor(WHITE, BLACK);
-	LCD_SetTextSize(3);
+	LCD_SetTextColor(GREEN, BLACK);
+	LCD_SetTextSize(2);
+	
+	LCD_Printf("Guten Tag!");
 	
 	printf("Init abgeschlossen\r\n");
 	
 	
 	// Infinite loop
 	while (1) {
-		
-		uint16_t x = Touch_GetX();
-		uint16_t y = Touch_GetY();
-		
-		char buf[20] = { ' ' };
-		sprintf(buf, "%d, %d      ", x, y);
-		buf[10] = 0;
-		
-		LCD_SetCursor(0, 0);
-		LCD_Printf(buf);
-		
-		delayms(500);
+		;
 	}
 }

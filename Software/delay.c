@@ -13,7 +13,7 @@ void delayms(int millis) {
 
 void sys_tick_config(void){
 	systick_set_clocksource(STK_CSR_CLKSOURCE_AHB); // CPU-Frequenz = 16MHz bei internem Oszillator
-	systick_set_reload(167999);
+	systick_set_reload(83999);
 	systick_interrupt_enable();
 	systick_counter_enable();
 }

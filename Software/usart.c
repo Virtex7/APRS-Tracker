@@ -11,9 +11,7 @@ static inline int dec_ndx(int n) { return (((n + BUFLEN) - 1) % BUFLEN); }
 
 
 void usart_clock_setup(void){
-	// Enable clocks for USART2
 	rcc_periph_clock_enable(RCC_USART2);
-	
 }
 void usart_setup(void) {
 	usart_clock_setup();
