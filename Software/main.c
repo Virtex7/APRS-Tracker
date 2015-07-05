@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>
 #include <stdlib.h>
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
@@ -10,12 +10,12 @@
 #include "usart.h"
 
 #include "board.h"
-#include "comm.h"
 #include "fattime.h"
 #include "ff_test_term.h"
 #include "rtc.h"
 #include "term_io.h"
 
+typedef enum { APPSTATE_FF_TERM, APPSTATE_TESTMENU } AppState;
 
 void clock_setup(void);
 void gpio_setup(void);
@@ -24,7 +24,7 @@ void gpio_setup(void);
 void clock_setup(void) {
 	// High Speed internal oscillator wird auf die PLL gemappt
 	// -> VOLLGAS/2
-	rcc_clock_setup_hse_3v3(&hse_8mhz_3v3[CLOCK_3V3_48MHZ]);
+// 	rcc_clock_setup_hse_3v3(&hse_8mhz_3v3[CLOCK_3V3_48MHZ]);
 	
 	// Enable GPIOD clock für ALLE GPIOs.
 	rcc_periph_clock_enable(RCC_GPIOA);
@@ -49,7 +49,7 @@ int main(void) {
 	gpio_setup();
 	usart_setup();
 	
-	printf("Willkommen!\r\n");
+	comm_puts("Willkommen!\r\n");
 	
 	LCD_Begin();
 	LCD_SetRotation(0);
@@ -65,11 +65,13 @@ int main(void) {
 	
 	LCD_Printf("Guten Tag!");
 	
-	printf("Init abgeschlossen\r\n");
+	comm_puts("Init abgeschlossen\r\n");
 	
+	
+	AppState appState = APPSTATE_FF_TERM;
 	
 	// Infinite loop
 	while (1) {
-		;
+		ff_test_term();
 	}
 }

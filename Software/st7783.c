@@ -221,7 +221,7 @@ void gpio_init(void) {
  */
 void LCD_Begin(void) {
 	
-	printf("beginne mit der lcd init\r\n");
+	comm_puts("beginne mit der lcd init\r\n");
 	
 	m_width     = TFTWIDTH;
 	m_height    = TFTHEIGHT;
@@ -234,16 +234,14 @@ void LCD_Begin(void) {
 	uint8_t i = 0;
 	uint16_t a, d;
 	
-	printf("vaiablen angelegt...\r\n");
+	comm_puts("vaiablen angelegt...\r\n");
 
 	// INIT
 	gpio_init();
-	printf("gpio init fertig\r\n");
+	comm_puts("gpio init fertig\r\n");
 	LCD_Reset();
-	printf("lcd reset fertig\r\n");
+	comm_puts("lcd reset fertig\r\n");
 	LCD_CS_LOW();
-	
-	printf("komisches while ding\r\n");
 
 	while(i < sizeof(ST7781_regValues) / sizeof(uint16_t)) {
 		a = ST7781_regValues[i++];
@@ -258,7 +256,7 @@ void LCD_Begin(void) {
     LCD_SetRotation(m_rotation);
 	LCD_SetAddrWindow(0, 0, TFTWIDTH-1, TFTHEIGHT-1);
 	
-	printf("LCD INIT fertig\r\n");
+	comm_puts("LCD INIT fertig\r\n");
 }
 
 /**
