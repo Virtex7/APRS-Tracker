@@ -1,21 +1,29 @@
 // #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+// #include <fcntl.h>
+// #include <assert.h>
+
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 
-
-#include "st7783.h"
-#include "touch.h"
+// Grundfunktionen
 #include "delay.h"
 #include "usart.h"
 
-#include "board.h"
-#include "fattime.h"
-#include "ff_test_term.h"
-#include "rtc.h"
-#include "term_io.h"
+// Display
+#include "st7783.h"
+#include "touch.h"
 
-typedef enum { APPSTATE_FF_TERM, APPSTATE_TESTMENU } AppState;
+// SD-Karte
+
+
+// GPS
+
+
+// Funkmodul
+
+
 
 void clock_setup(void);
 void gpio_setup(void);
@@ -68,10 +76,9 @@ int main(void) {
 	comm_puts("Init abgeschlossen\r\n");
 	
 	
-	AppState appState = APPSTATE_FF_TERM;
 	
 	// Infinite loop
 	while (1) {
-		ff_test_term();
+		
 	}
 }

@@ -71,7 +71,7 @@ ifeq ($(V),1)
 $(info Using $(OPENCM3_DIR) path to library)
 endif
 
-INCLUDE_DIR	= $(OPENCM3_DIR)/include -Ichan_fat/src/
+INCLUDE_DIR	= $(OPENCM3_DIR)/include
 LIB_DIR		= $(OPENCM3_DIR)/lib
 SCRIPT_DIR	= $(OPENCM3_DIR)/scripts
 
@@ -188,6 +188,7 @@ jlink: $(BINARY).jlink
 clean:
 	@#printf "  CLEAN\n"
 	$(Q)$(RM) *.o *.d *.elf *.bin *.hex *.srec *.list *.map
+	$(Q)$(RM) ./openfat/src/*.o ./openfat/src/*.d ./openfat/src/*.a
 
 stylecheck: $(STYLECHECKFILES:=.stylecheck)
 styleclean: $(STYLECHECKFILES:=.styleclean)

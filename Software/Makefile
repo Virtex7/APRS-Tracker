@@ -22,7 +22,10 @@ BINARY = main
 OPENCM3_DIR=/usr/local/arm-none-eabi
 LDSCRIPT = ./nucleo-f401re.ld
 
-OBJS = delay.o st7783.o touch.o usart.o fattime.o ff_test_term.o rtc.o term_io.o sd_spi_loc3_stm32.o
-OBJS += ./chan_fat/src/ff.o ./chan_fat/src/diskio.o
+OBJS =  delay.o st7783.o touch.o usart.o
+OBJS += ./openfat/src/direntry.o ./openfat/src/fat_core.o ./openfat/src/mbr.o ./openfat/src/unixlike.o ./openfat/src/write.o 
+
+LDFLAGS += -L./openfat/src
+CFLAGS  += -I./openfat/include/
 
 include ./Makefile.include
