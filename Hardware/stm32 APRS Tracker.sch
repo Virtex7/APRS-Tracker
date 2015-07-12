@@ -28,7 +28,11 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:ph-modules
 LIBS:Resonator_3pins
+LIBS:prog_sockets
+LIBS:schaltwandler
+LIBS:w_microcontrollers
 LIBS:stm32 APRS Tracker-cache
 EELAYER 25 0
 EELAYER END
@@ -1471,4 +1475,71 @@ Text Label 5000 5600 2    60   ~ 0
 ws2812
 Wire Wire Line
 	5000 5600 4450 5600
+$Comp
+L STM32F103x IC?
+U 1 1 55A2E6F0
+P -2100 6250
+F 0 "IC?" H -1650 4200 60  0000 C CNN
+F 1 "STM32F103x" H -2100 6200 60  0000 C CNN
+F 2 "" H -1800 3600 60  0000 C CNN
+F 3 "" H -1800 3600 60  0000 C CNN
+	1    -2100 6250
+	1    0    0    -1  
+$EndComp
+Text Label -3700 5950 0    60   ~ 0
+SwDio
+Text Label -3700 6050 0    60   ~ 0
+SwClk
+Wire Wire Line
+	-3350 6050 -3700 6050
+Wire Wire Line
+	-3700 5950 -3350 5950
+Text Label -3700 6900 0    60   ~ 0
+nRst
+Wire Wire Line
+	-3350 6900 -3700 6900
+Text Label -250 5350 2    60   ~ 0
+I2C1_SDA
+Text Label -250 5250 2    60   ~ 0
+I2C1_SCL
+Wire Wire Line
+	-750 5350 -250 5350
+Wire Wire Line
+	-250 5250 -750 5250
+Text Label -250 5750 2    60   ~ 0
+uart3rx
+Text Label -250 5650 2    60   ~ 0
+uart3tx
+Wire Wire Line
+	-250 5750 -750 5750
+Wire Wire Line
+	-750 5650 -250 5650
+Text Label -3700 5650 0    60   ~ 0
+uart1rx
+Text Label -3700 5550 0    60   ~ 0
+uart1tx
+Wire Wire Line
+	-3350 5650 -3700 5650
+Wire Wire Line
+	-3700 5550 -3350 5550
+Text Label -300 7400 2    60   ~ 0
+uart4tx
+Text Label -300 7500 2    60   ~ 0
+uart4rx
+Wire Wire Line
+	-300 7400 -750 7400
+Wire Wire Line
+	-750 7500 -300 7500
+Text Label -300 7200 2    60   ~ 0
+SD_D0
+Text Label -300 7600 2    60   ~ 0
+SD_CK
+Text Label -300 8100 2    60   ~ 0
+SD_CMD
+Wire Wire Line
+	-300 8100 -750 8100
+Wire Wire Line
+	-300 7200 -750 7200
+Wire Wire Line
+	-300 7600 -750 7600
 $EndSCHEMATC
