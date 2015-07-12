@@ -1,3 +1,3 @@
 [submodule "Software/openfat"]
 	path = Software/openfat
-	url = git@github.com:tmolteno/openfat.git
+	url = https://github.com/tmolteno/openfat.git
