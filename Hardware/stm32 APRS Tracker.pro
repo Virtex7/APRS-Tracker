@@ -1,4 +1,4 @@
-update=Fr 10 Jul 2015 16:34:57 CEST
+update=12.07.2015 13:58:38
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,8 +58,8 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/philipp/Dokumente/dev/PhilippsKicadBauteile/Schaltplansymbole/ph-modules
-LibName31=/home/philipp/Dokumente/dev/PhilippsKicadBauteile/Schaltplansymbole/Resonator_3pins
-LibName32=/home/philipp/Dokumente/dev/PhilippsKicadBauteile/Schaltplansymbole/prog_sockets
-LibName33=/home/philipp/Dokumente/dev/PhilippsKicadBauteile/Schaltplansymbole/schaltwandler
-LibName34=/home/philipp/Dokumente/dev/PhilippsKicadBauteile/Schaltplansymbole/w_microcontrollers
+LibName30=../Schaltplansymbole/ph-modules
+LibName31=../Schaltplansymbole/Resonator_3pins
+LibName32=../Schaltplansymbole/prog_sockets
+LibName33=../Schaltplansymbole/schaltwandler
+LibName34=../Schaltplansymbole/w_microcontrollers
