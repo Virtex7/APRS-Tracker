@@ -1,4 +1,4 @@
-update=12.07.2015 13:58:38
+update=So 12 Jul 2015 22:38:13 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=../Schaltplansymbole/Resonator_3pins
 LibName32=../Schaltplansymbole/prog_sockets
 LibName33=../Schaltplansymbole/schaltwandler
 LibName34=../Schaltplansymbole/w_microcontrollers
+LibName35=ph-diodes
