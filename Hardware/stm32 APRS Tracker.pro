@@ -1,4 +1,4 @@
-update=So 12 Jul 2015 22:38:13 CEST
+update=Mo 13 Jul 2015 14:02:42 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,4 @@ LibName32=../Schaltplansymbole/prog_sockets
 LibName33=../Schaltplansymbole/schaltwandler
 LibName34=../Schaltplansymbole/w_microcontrollers
 LibName35=ph-diodes
+LibName36=ph-sensor
