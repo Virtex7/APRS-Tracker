@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name con-amp-micromatch)(type Legacy)(uri "$(KIPRJMOD)/con-amp-micromatch.mod")(options "")(descr ""))
+)
