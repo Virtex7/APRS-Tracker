@@ -307,8 +307,6 @@ Wire Wire Line
 	4200 4600 4200 4450
 Connection ~ 4200 4450
 Wire Wire Line
-	3850 4450 3850 4600
-Wire Wire Line
 	3250 4300 3250 4900
 Wire Wire Line
 	3250 4300 4300 4300
@@ -1064,4 +1062,9 @@ F 3 "" H 3550 6600 60  0000 C CNN
 	1    3550 6600
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3850 4600 3250 4600
+Connection ~ 3250 4600
+Text Label 8950 3700 0    60   ~ 0
+Vout
 $EndSCHEMATC
