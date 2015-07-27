@@ -11,6 +11,10 @@ gerber/*
 .directory
 ..directory.kate-swp
 
+# LTSpice
+*.log
+*.raw
+
 # STM32 Kompilat und Zubehördaten:
 
 *.a
